@@ -90,4 +90,4 @@ Related themes, scripts, extensions.
 
 ## Gallery
 
-![Gallery](screenshots/gallery.png)
+![Gallery](screenshots/gallery.jpg)
