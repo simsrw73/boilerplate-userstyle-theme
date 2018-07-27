@@ -42,14 +42,14 @@ There are a couple of options for installing the theme in your browser.
 
 Once you've installed one of the extensions above, you are ready to install the theme:
 
-From its home page at [OpenUserCSS](https://openusercss.org/)
+  * From its home page at [OpenUserCSS](https://openusercss.org/)
 
 Or directly from here:
 
-For Stylus users:<br>
+  * For Stylus users:<br>
 [![Install with Stylus](https://img.shields.io/badge/Install%20with-Stylus-00adad.svg)](https://github.com/simsrw73/boilerplate-userstyle-theme/raw/master/release/theme.user.css)
 
-For Tampermonkey users:<br>
+  * For Tampermonkey users:<br>
 [![Install with Tampermonkey](https://img.shields.io/badge/Install%20with-Tampermonkey-00485b.svg)](https://github.com/simsrw73/boilerplate-userstyle-theme/raw/master/release/theme.user.js)
 
 ## Modifying the Theme
