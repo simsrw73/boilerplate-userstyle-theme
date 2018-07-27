@@ -17,6 +17,10 @@
     "last 3 versions",
     "not dead"
   ],
+  "config": {
+    "mainCSS": "sass/theme.css",
+    "basename": "theme"
+  },
   "main": "",
   "scripts": {
     "build": "npm-run-all build:*",
@@ -29,6 +33,7 @@
     "release": "npm-run-all release:*",
       "release:userstyle": "node-sass-chokidar --output-style compact sass/ > release/theme.user.css",
       "release:userjs": "echo Not yet implemented",
+    "postrelease": "postcss release/white-off.user.css --use autoprefixer --replace --no-map",
     "clean": "rimraf dist release"
   },
   "devDependencies": {
