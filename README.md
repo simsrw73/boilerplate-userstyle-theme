@@ -42,6 +42,10 @@ There are a couple of options for installing the theme in your browser.
 
 Once you've installed one of the extensions above, you are ready to install the theme:
 
+From its home page at [OpenUserCSS](https://openusercss.org/)
+
+Or directly from here:
+
 For Stylus users:<br>
 [![Install with Stylus](https://img.shields.io/badge/Install%20with-Stylus-00adad.svg)](https://github.com/simsrw73/boilerplate-userstyle-theme/raw/master/release/theme.user.css)
 
@@ -87,6 +91,8 @@ See [Installation](https://github.com/openstyles/stylus/wiki/Usercss#installatio
 ## See Also
 
 Related themes, scripts, extensions.
+
+Find more custom themes at [OpenUserCSS](https://openusercss.org/).
 
 ## Gallery
 
