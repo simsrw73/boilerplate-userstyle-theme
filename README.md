@@ -1,3 +1,6 @@
+> **NOTE: ALPHA Release**
+> This is not fully complete. It's mostly clipped verbatim from a theme I'm working on. It may be useful in its current state, but no promises... yet.
+
 # Boilerplate for creating User Styles
 
 [![Install with Stylus](https://img.shields.io/badge/Install%20with-Stylus-00adad.svg)](https://github.com/simsrw73/boilerplate-userstyle-theme/raw/master/release/theme.user.css)
