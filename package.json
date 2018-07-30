@@ -14,17 +14,17 @@
   },
   "browserslist": [
     "> 1%",
-    "last 3 versions",
+    "last 10 versions",
     "not dead"
   ],
   "config": {
-    "build": "dev"
+    "build": "debug"
   },
   "scripts": {
     "prebuild": "mkdirp debug release",
     "build": "cross-var npm-run-all build:$npm_package_config_build:*",
-      "build:dev:scss": "cross-var node-sass-chokidar --source-map-contents sass/theme.scss > debug/theme.user.css",
-      "build:dev:postcss": "cross-var postcss debug/theme.user.css --use autoprefixer --replace",
+      "build:debug:scss": "cross-var node-sass-chokidar --source-map-contents sass/theme.scss > debug/theme.user.css",
+      "build:debug:postcss": "cross-var postcss debug/theme.user.css --use autoprefixer --replace",
       "build:release:scss": "cross-var node-sass-chokidar --output-style compact sass/theme.scss > release/theme.user.css",
       "build:release:postcss": "cross-var postcss release/theme.user.css --use autoprefixer --replace --no-map",
     "watch": "npm-run-all --parallel watch:*",

@@ -1,5 +1,21 @@
+debug/
 
-# Created by https://www.gitignore.io/api/osx,node,sass,windows
+# Created by https://www.gitignore.io/api/osx,node,sass,linux,windows,visualstudiocode
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
 ### Node ###
 # Logs
@@ -110,6 +126,13 @@ Temporary Items
 *.sass.map
 *.scss.map
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -136,4 +159,4 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# End of https://www.gitignore.io/api/osx,node,sass,windows
+# End of https://www.gitignore.io/api/osx,node,sass,linux,windows,visualstudiocode
