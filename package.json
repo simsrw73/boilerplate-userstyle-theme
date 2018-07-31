@@ -22,6 +22,7 @@
   },
   "scripts": {
     "build": "cross-var npm-run-all build:$npm_package_config_build:*",
+      "build:debug:lint": "npm run lint --silent || echo \"lint found some problems.\"",
       "build:debug:scss": "node-sass-chokidar --verbose --include-path ./node_modules ./sass/theme.scss ./debug/theme.user.css --source-map-root ./sass --source-map true --source-map-embed",
       "build:debug:postcss": "postcss --verbose ./debug/theme.user.css --use autoprefixer --replace --no-map",
       "build:release:scss": "node-sass-chokidar --include-path ./node_modules ./sass/theme.scss ./release/theme.user.css --output-style compact",
