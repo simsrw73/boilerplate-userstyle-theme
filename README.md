@@ -75,11 +75,31 @@ cd my-theme
 npm install
 ```
 
-### Build the Theme
+### Build your Theme
 
 ```shell
 npm run build
 ```
+
+Or, to continuously monitor changes and automatically rebuild:
+
+```shell
+npm run watch
+```
+
+### Test your Theme
+
+Load the theme in to your browser with the Stylus extension by either: dragging the file **"theme.user.css"** to your browser or using the Open Dialog in the browser (Ctrl-o). When Stylus opens the install window, check the options ***Check for updates*** and ***Live reload***, and then click the **Install style** button.
+
+
+### Release your Theme
+
+Build the final relase version of the theme:
+
+```shell
+npm run release
+```
+
 
 ### Import the Theme to the Browser Plugin
 
