@@ -22,19 +22,20 @@
   },
   "scripts": {
     "build": "cross-var npm-run-all build:$npm_package_config_build:*",
-      "build:debug:lint": "npm run lint --silent || echo \"lint found some problems.\"",
-      "build:debug:scss": "node-sass-chokidar --verbose --include-path ./node_modules ./sass/theme.scss ./debug/theme.user.css --source-map-root ./sass --source-map true --source-map-embed",
-      "build:debug:postcss": "postcss --verbose ./debug/theme.user.css --use autoprefixer --replace --no-map",
-      "build:release:scss": "node-sass-chokidar --include-path ./node_modules ./sass/theme.scss ./release/theme.user.css --output-style compact",
-      "build:release:postcss": "postcss ./release/theme.user.css --use autoprefixer --replace --no-map",
+    "build:debug:lint": "npm run lint --silent || echo \"lint found some problems.\"",
+    "build:debug:scss": "node-sass-chokidar --verbose --include-path ./node_modules ./sass/theme.scss ./debug/theme.css --source-map-root ./sass --source-map true --source-map-embed",
+    "build:debug:postcss": "postcss --verbose ./debug/theme.css --use autoprefixer --replace --no-map",
+    "build:debug:css2userstyle": "css2userstyle ./debug/theme.css",
+    "build:release:scss": "node-sass-chokidar --include-path ./node_modules ./sass/theme.scss ./release/theme.css --output-style compact",
+    "build:release:postcss": "postcss ./release/theme.css --use autoprefixer --replace --no-map",
+    "build:release:css2userstyle": "css2userstyle ./release/theme.css",
     "prewatch": "npm run build",
     "watch": "npm-run-all --parallel watch:*",
-      "watch:scss": "chokidar --verbose ./sass/**/*.scss -c \"npm run build\"",
-      "watch:postcss": "postcss --verbose ./debug/theme.user.css --use autoprefixer --replace --no-map",
+    "watch:scss": "chokidar --verbose ./sass/**/*.scss -c \"npm run build\"",
+    "watch:postcss": "postcss --verbose ./debug/theme.css --use autoprefixer --replace --no-map",
+    "watch:css2userstyle": "css2userstyle ./debug/theme.css",
     "lint": "stylelint ./sass/**/*.scss",
-    "release": "npm-run-all release:*",
-      "release:userstyle": "cross-var npm run build --$npm_package_name:build=release",
-      "release:userjs": "echo Don't know how to do this yet.",
+    "release": "cross-var npm run build --$npm_package_name:build=release",
     "clean": "rimraf debug release"
   },
   "devDependencies": {
@@ -48,6 +49,7 @@
     "rimraf": "^2.6.2",
     "stylelint": "^9.3.0",
     "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-scss": "^3.1.3"
+    "stylelint-scss": "^3.1.3",
+    "userstyle-gen": "^0.1.1"
   }
 }
