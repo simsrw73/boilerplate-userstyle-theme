@@ -2,25 +2,32 @@
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
+// for using Fontawesome icons, install Fontawesome with npm
+@import "@fortawesome/fontawesome-free/scss/variables";
+@import "@fortawesome/fontawesome-free/scss/mixins";
+@import "@fortawesome/fontawesome-free/scss/core";
+$fa-font-path: "https://use.fontawesome.com/releases/v#{$fa-version}/webfonts";
 
-// for using Fontawesome icons, install Fontawesome into sass/vendor/fontawesome, and then add imports
-// @import "./vendor/fontawesome/scss/fontawesome.scss";
-// @import "./vendor/fontawesome/scss/fa-solid.scss";
-// @import "./vendor/fontawesome/scss/fa-brands.scss";
-//
-// Then add the following lines to a ::before or ::after psuedo element to insert fontawesome icon
-// @include fa-icon;
-// @extend .fas;
-// content: fa-content($fa-var-smile);
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
 
+@mixin fontawesome-icon($icon, $size: 24px, $weight: 400) {
+  @extend %fa-icon;
+  @extend .fas;
+  content: fa-content($icon);
+  font-weight: $weight;
+  font-size: $size;
+}
 
-// for using Material icons
+/*
+ *   Material Icons
+ */
+
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
   font-weight: 400;
-  src:
-    url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
+  src: url(https://fonts.gstatic.com/s/materialicons/v38/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
     format("woff2");
 }
 
